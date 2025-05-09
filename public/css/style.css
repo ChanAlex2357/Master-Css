@@ -4,13 +4,111 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #FBFBFB;
+html {
   color: #1E201E;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #FBFBFB;
+}
+
+main {
+  padding: min(5rem, 7%);
+}
+main p {
+  margin-top: 0.35em;
+}
+
+#overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  z-index: 9;
+  display: none;
+}
+#overlay.show {
+  display: block;
+}
+
+.togller {
+  padding: 1rem 1rem;
+}
+.togller:hover, .togller.focused {
+  background-color: #606676;
 }
 
 .navbar {
-  color: #F5EEDC;
+  background-color: #1E201E;
+  color: #FBFBFB;
+  display: flex;
+  z-index: 10;
+}
+.navbar .close_toggler {
+  display: none;
+}
+.navbar .togller {
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar .close_toggler {
+    display: block;
+  }
+  .navbar .togller {
+    display: block;
+  }
+}
+.navbar li {
+  display: flex;
+}
+.navbar__brand {
+  margin-right: auto;
+  padding: 1rem 2rem;
+}
+.navbar__nav {
+  list-style: none;
+  display: flex;
+}
+@media screen and (max-width: 700px) {
+  .navbar__nav {
+    position: absolute;
+    background-color: #1E201E;
+    top: 100%;
+    height: auto;
+    width: 100%;
+    z-index: 10;
+    border-top: 2px solid #606676;
+    flex-direction: column;
+    display: none;
+  }
+}
+.navbar__nav.show {
+  display: block;
+}
+.navbar__nav .nav__link {
+  text-decoration: none;
+  color: #FBFBFB;
+  padding: 1rem 2rem;
+  transition: background-color 150ms ease;
+}
+.navbar__nav .nav__link.active-link {
+  border-bottom: 5 px solid #DDA853;
+}
+.navbar__nav .nav__link:hover {
+  background-color: #606676;
+  border-bottom: 2px solid;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .navbar__nav .nav__link {
+    width: 100%;
+    padding-left: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

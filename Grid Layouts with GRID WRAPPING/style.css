@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1E201E;
+    color: #f8f8f8;
+}
+
+.title h2 {
+    text-align: center;   
+}
+
+.title {
+    padding: 3rem 0;
+}
+
+.card {
+    padding: 1rem;
+    background-color: #424243;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.grid-container {
+    margin: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 15px;
+    justify-content: center;
+}

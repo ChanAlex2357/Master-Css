@@ -1,4 +1,80 @@
 @use "variables";
 .navbar {
-    color:variables.$primary-color;
+    background-color: variables.$dark-color;
+    color: variables.$white-color;
+    display: flex;
+    z-index: 10;
+    
+    
+    .close_toggler{
+        display: none;
+    }
+
+    .togller {
+        display: none;
+    }
+
+    @media screen and (max-width: 700px){
+        position: relative;
+
+        .close_toggler{
+            display: block;
+        }
+    
+        .togller {
+            display: block;
+        }
+    }
+
+    li {
+        display: flex;
+    }
+    &__brand {
+        margin-right: auto;
+        padding: 1rem 2rem;
+    }
+    &__nav {
+        list-style: none;
+        display: flex;
+
+        @media screen and (max-width: 700px){
+            position: absolute;
+            background-color: variables.$dark-color;
+            top: 100%;
+            height: auto;
+            width: 100%;
+            z-index: 10;
+            border-top: 2px  solid variables.$light-color;
+            flex-direction: column;
+            display: none;
+        }
+
+        &.show {
+            display: block;
+        }
+        
+        .nav__link {
+            text-decoration: none;
+            color: variables.$white-color ;
+            padding: 1rem 2rem;
+            transition: background-color 150ms ease;
+            
+            &.active-link {
+                border-bottom: 5 px solid variables.$warning-color;
+            }
+
+            &:hover {
+                background-color: variables.$light-color;
+                border-bottom: 2px solid;
+                cursor: pointer;
+            }
+
+            @media screen and (max-width: 700px){
+                width: 100%;
+                padding-left: 2.5rem;
+            }
+        }
+    }
+
+    
 }
