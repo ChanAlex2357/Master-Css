@@ -1,0 +1,13 @@
+.card {
+    border: 1px solid;
+    padding: 1rem;
+    &-title{
+        margin-bottom: 0.5rem;
+    }
+    &-footer{
+        margin-top: 0.5rem;
+    }
+}
+.rounded {
+    border-radius: 0.2rem;
+}

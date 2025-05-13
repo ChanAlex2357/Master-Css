@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login page</title>
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="card-title">
+    <main>
+        <div class="card rounded">
+            <div class="card-title txt-center">
                 Welcome
             </div>
             <div class="card-body">
                 <form action="">
+                    <div class="input-group">
+                        <label for="username" class="input-label">Username</label>
+                        <input type="text" name="username" id="username" class="input-form">
+                    </div>
+                    <div class="input-group">
+                        <label for="password" class="input-label">Password</label>
+                        <input type="text" name="password" id="password" class="input-form">
+                    </div>
+                    <div class="input-group">
+                        <p>
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Remember me</label>
+                        </p>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn" >Connexion</button>
+                    </div>
                 </form>
             </div>
+            <div class="card-footer">
+                <div class="diff-container">
+                    <a href="">Create an account</a>
+                    <a href="">Forgot password</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
